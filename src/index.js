@@ -2,7 +2,7 @@
 let currentSlide = 0;
 const slides = document.querySelectorAll('.carousel-slide');
 const indicators = document.querySelectorAll('.indicator');
-const slideInterval = 3000; // 3 segundos
+const slideInterval = 6000; // 3 segundos
 
 function showSlide(index) {
     // Remove active de todos

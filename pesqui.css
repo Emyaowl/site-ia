@@ -1807,7 +1807,7 @@ section:not(.carousel-section) {
         padding: 0.8rem 1rem;
     }
 }
-/* ======= FOOTER ======= */
+
 footer {
   width: 100%;
   background: rgba(10, 15, 30, 0.8);
@@ -1873,11 +1873,30 @@ footer ul li a.active {
     font-size: 0.85rem;
   }
 }
-nav a.active,
 footer a.active {
   color: #fff;
   background-color: #2a2f61;
   border-radius: 10px;
   padding: 4px 8px;
   font-weight: 600;
+}
+
+.risk-details {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(65, 54, 195, 0.1);
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-primary);
+}
+
+.risk-details h4 {
+    color: var(--accent-primary);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.risk-details p {
+    color: var(--text-gray);
+    line-height: 1.8;
+    font-size: 1rem;
 }

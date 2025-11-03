@@ -1,34 +1,144 @@
-// Base de dados de profissões
+// Base de dados de profissões com descrições detalhadas
 const jobsData = {
     // Risco Crítico (85-95%)
-    'motorista': { risk: 90, timeline: '5-10 anos', category: 'critico' },
-    'caminhoneiro': { risk: 92, timeline: '5-10 anos', category: 'critico' },
-    'caixa': { risk: 88, timeline: '3-7 anos', category: 'critico' },
-    'operador de telemarketing': { risk: 95, timeline: '2-5 anos', category: 'critico' },
-    'atendente': { risk: 85, timeline: '3-7 anos', category: 'critico' },
-    'operador de maquina': { risk: 87, timeline: '10-15 anos', category: 'critico' },
+    'motorista': { 
+        risk: 90, 
+        timeline: '5-10 anos', 
+        category: 'critico',
+        details: '3,5 milhões de motoristas nos EUA ameaçados, 2 milhões no Brasil. Veículos autônomos prometem 30-40% de economia para empresas e 90% menos acidentes.'
+    },
+    'caminhoneiro': { 
+        risk: 92, 
+        timeline: '5-10 anos', 
+        category: 'critico',
+        details: '3,5 milhões de motoristas nos EUA ameaçados, 2 milhões no Brasil. Veículos autônomos prometem 30-40% de economia para empresas e 90% menos acidentes.'
+    },
+    'caixa': { 
+        risk: 88, 
+        timeline: '3-7 anos', 
+        category: 'critico',
+        details: 'Sistemas de pagamento automatizados e caixas de autoatendimento já substituem milhões de trabalhadores globalmente. Economia de 40-60% em custos operacionais para empresas.'
+    },
+    'operador de telemarketing': { 
+        risk: 95, 
+        timeline: '2-5 anos', 
+        category: 'critico',
+        details: '65% dos call centers já automatizados, eliminando 1,2 milhão de empregos só nos EUA. Economia de 30-50% em custos operacionais. Atendimento humano restrito a casos complexos.'
+    },
+    'atendente': { 
+        risk: 85, 
+        timeline: '3-7 anos', 
+        category: 'critico',
+        details: 'Chatbots e assistentes virtuais substituem atendimento básico. 65% dos call centers já automatizados globalmente. Atendimento humano cada vez mais limitado a situações excepcionais.'
+    },
+    'operador de maquina': { 
+        risk: 87, 
+        timeline: '10-15 anos', 
+        category: 'critico',
+        details: 'Robôs industriais e sistemas automatizados assumem tarefas repetitivas. Indústria 4.0 acelera automação de manufatura com economia de 35-50% em custos de produção.'
+    },
     
     // Risco Alto (60-84%)
-    'contador': { risk: 75, timeline: '10-15 anos', category: 'alto' },
-    'tradutor': { risk: 70, timeline: '5-10 anos', category: 'alto' },
-    'analista de dados': { risk: 65, timeline: '10-15 anos', category: 'alto' },
-    'jornalista': { risk: 68, timeline: '10-15 anos', category: 'alto' },
-    'paralegal': { risk: 72, timeline: '10-15 anos', category: 'alto' },
+    'contador': { 
+        risk: 75, 
+        timeline: '10-15 anos', 
+        category: 'alto',
+        details: 'Softwares automatizam contabilidade básica e geração de relatórios. 40% das tarefas contábeis já podem ser automatizadas, mas análise estratégica e consultoria permanecem humanas.'
+    },
+    'tradutor': { 
+        risk: 70, 
+        timeline: '5-10 anos', 
+        category: 'alto',
+        details: 'IA generativa traduz com qualidade crescente. Google Translate e DeepL substituem tradução básica, mas contexto cultural e tradução literária ainda exigem humanos.'
+    },
+    'analista de dados': { 
+        risk: 65, 
+        timeline: '10-15 anos', 
+        category: 'alto',
+        details: 'IA automatiza coleta e análise básica de dados. Ferramentas como ChatGPT e Python automatizam 50-60% das tarefas. Interpretação estratégica e decisão final permanecem humanas.'
+    },
+    'jornalista': { 
+        risk: 68, 
+        timeline: '10-15 anos', 
+        category: 'alto',
+        details: 'IA gera notícias simples e relatórios factuais. Investigação jornalística profunda, entrevistas e análise crítica permanecem essencialmente humanas.'
+    },
+    'paralegal': { 
+        risk: 72, 
+        timeline: '10-15 anos', 
+        category: 'alto',
+        details: 'Sistemas como COIN do JPMorgan analisam documentos legais automaticamente, substituindo 360 mil horas de trabalho por ano. Pesquisa jurídica básica já é amplamente automatizada.'
+    },
     
     // Risco Médio (35-59%)
-    'advogado': { risk: 45, timeline: '15-20 anos', category: 'medio' },
-    'programador': { risk: 40, timeline: '15-20 anos', category: 'medio' },
-    'designer': { risk: 42, timeline: '15-20 anos', category: 'medio' },
-    'arquiteto': { risk: 38, timeline: '15-20 anos', category: 'medio' },
-    'engenheiro': { risk: 48, timeline: '15-20 anos', category: 'medio' },
+    'advogado': { 
+        risk: 45, 
+        timeline: '15-20 anos', 
+        category: 'medio',
+        details: 'IA automatiza pesquisa jurídica e análise de contratos, mas argumentação em tribunal, estratégia legal e relacionamento com clientes exigem julgamento humano.'
+    },
+    'programador': { 
+        risk: 40, 
+        timeline: '15-20 anos', 
+        category: 'medio',
+        details: '55% mais produtivos com GitHub Copilot. 92% dos desenvolvedores já usam IA. Programadores juniores fazendo tarefas básicas em risco, seniores usando IA ficam exponencialmente mais valiosos.'
+    },
+    'designer': { 
+        risk: 42, 
+        timeline: '15-20 anos', 
+        category: 'medio',
+        details: '40% dos designers usam IA generativa com redução de 60% no tempo de prototipagem. DALL-E e Midjourney automatizam execução, mas direção criativa e estratégia permanecem humanas.'
+    },
+    'arquiteto': { 
+        risk: 38, 
+        timeline: '15-20 anos', 
+        category: 'medio',
+        details: 'IA gera plantas e modelos 3D rapidamente, mas criatividade, compreensão de necessidades do cliente e visão arquitetônica permanecem distintamente humanas.'
+    },
+    'engenheiro': { 
+        risk: 48, 
+        timeline: '15-20 anos', 
+        category: 'medio',
+        details: 'IA auxilia em cálculos e simulações, aumentando produtividade. Engenharia criativa, resolução de problemas complexos e supervisão crítica permanecem essenciais.'
+    },
     
     // Risco Baixo (0-34%)
-    'professor': { risk: 25, timeline: '20+ anos', category: 'baixo' },
-    'psicologo': { risk: 15, timeline: '20+ anos', category: 'baixo' },
-    'enfermeiro': { risk: 20, timeline: '20+ anos', category: 'baixo' },
-    'medico': { risk: 18, timeline: '20+ anos', category: 'baixo' },
-    'artista': { risk: 22, timeline: '20+ anos', category: 'baixo' },
-    'terapeuta': { risk: 12, timeline: '20+ anos', category: 'baixo' }
+    'professor': { 
+        risk: 25, 
+        timeline: '20+ anos', 
+        category: 'baixo',
+        details: '15-25% de risco. Habilidades humanas como empatia, criatividade, julgamento ético e pensamento contextual são difíceis de automatizar. Relacionamento e inspiração permanecem humanos.'
+    },
+    'psicologo': { 
+        risk: 15, 
+        timeline: '20+ anos', 
+        category: 'baixo',
+        details: 'Empatia profunda, compreensão de contexto emocional complexo e construção de confiança terapêutica são distintamente humanas. IA pode auxiliar, mas não substituir.'
+    },
+    'enfermeiro': { 
+        risk: 20, 
+        timeline: '20+ anos', 
+        category: 'baixo',
+        details: 'Cuidado compassivo, avaliação clínica em situações ambíguas e suporte emocional a pacientes exigem presença humana. Tecnologia auxilia, mas não substitui.'
+    },
+    'medico': { 
+        risk: 18, 
+        timeline: '20+ anos', 
+        category: 'baixo',
+        details: 'IA auxilia em diagnóstico e análise de exames, mas decisões médicas complexas, comunicação empática com pacientes e julgamento ético permanecem humanos.'
+    },
+    'artista': { 
+        risk: 22, 
+        timeline: '20+ anos', 
+        category: 'baixo',
+        details: 'IA gera arte, mas criatividade original, expressão emocional autêntica e visão artística única permanecem distintamente humanas. IA é ferramenta, não substituta.'
+    },
+    'terapeuta': { 
+        risk: 12, 
+        timeline: '20+ anos', 
+        category: 'baixo',
+        details: 'Empatia, escuta ativa, construção de relacionamento terapêutico e compreensão profunda de contexto emocional são irredutivelmente humanas.'
+    }
 };
 
 const descriptions = {
@@ -115,6 +225,11 @@ document.getElementById('checkJobBtn').addEventListener('click', function() {
                 <div class="risk-bar ${bgClass}" style="width: 0%"></div>
             </div>
             <div class="risk-description">${descriptions[jobInfo.category]}</div>
+            
+            <div class="risk-details">
+                <h4>📊 Contexto e Dados</h4>
+                <p>${jobInfo.details}</p>
+            </div>
             
             <div class="risk-timeline">
                 <h4>⏱️ Timeline Estimada</h4>
