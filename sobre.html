@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | IA, Ética e Futuro</title>
+    <link rel="stylesheet" href="pesqui.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, rgba(12, 12, 22, 0.95) 0%, rgba(26, 24, 69, 0.85) 50%, rgba(45, 39, 100, 0.95) 100%),
+                        url('./imagens/image.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: var(--text-white);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(65, 54, 195, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(135, 163, 247, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .topic-section {
+            margin-top: 4rem;
+        }
+
+        .topic-header {
+            background: linear-gradient(135deg, rgba(65, 54, 195, 0.2), rgba(135, 163, 247, 0.1));
+            border-left: 4px solid var(--accent-primary);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        .topic-header h3 {
+            color: var(--accent-secondary);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .topic-header p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        .duo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./imagens/logo.png" alt="SNCT 2025" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="pesqui.html">Pesquisa</a></li>
+                <li><a href="ia.html">Deepfakes</a></li>
+                <li><a href="emprego.html">Empregos</a></li>
+                <li><a href="quiz.html">Quiz Ético</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Sobre Nós</h1>
+            <p class="hero-subtitle">Conheça a equipe por trás desta investigação sobre IA, Ética e Futuro do Trabalho</p>
+        </div>
+
+        <!-- Projeto Section -->
+        <div class="conteudo">
+            <h2>🎯 Nosso Projeto</h2>
+            <p>
+                Este trabalho surgiu porque precisamos entender como a Inteligência Artificial está mudando 
+                três coisas importantes na nossa vida: <strong>como trabalhamos</strong>, 
+                <strong>o que é certo ou errado quando máquinas decidem por nós</strong>, e 
+                <strong>quem é responsável</strong> quando a IA faz algo que afeta as pessoas.
+            </p>
+            <p>
+                Criado para a <strong>SNCT 2025</strong>, nosso objetivo é mostrar na prática os problemas éticos 
+                da IA. Não temos todas as respostas, mas queremos que você veja e sinta esses dilemas por si mesmo.
+            </p>
+
+            <div class="projeto-stats" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="stat-card">
+                    <div class="stat-number" style="font-size: 3rem; color: var(--accent-primary); margin-bottom: 0.5rem;">12</div>
+                    <div class="stat-label" style="color: var(--text-gray);">Fontes Documentadas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" style="font-size: 3rem; color: var(--accent-primary); margin-bottom: 0.5rem;">6</div>
+                    <div class="stat-label" style="color: var(--text-gray);">Ferramentas Interativas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" style="font-size: 3rem; color: var(--accent-primary); margin-bottom: 0.5rem;">40+</div>
+                    <div class="stat-label" style="color: var(--text-gray);">Horas de Pesquisa</div>
+                </div>
+            </div>
+        </div>
+
+ <!-- Team Section -->
+<section style="margin-top: 5rem;">
+    <h2 class="section-title" style="text-align: center;">Nossa Equipe</h2> 
+    <p style="text-align: center; color: var(--text-gray); margin-top: 1rem; font-size: 1.05rem;">
+        8 estudantes organizados em 4 duplas de pesquisa, cada uma focada em um aspecto da Inteligência Artificial
+    </p>
+    
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem;">
+        
+        <!-- Dupla 1: Casos Reais -->
+        <div class="team-member-card">
+            <div class="member-names">
+                <h3 class="member-name">Nome 1</h3>
+                <h3 class="member-name">Nome 2</h3>
+            </div>
+            <div class="member-topic topic-casos">
+                <span class="topic-icon">🚨</span>
+                <h4>Casos Reais</h4>
+                <p>Falhas éticas em IA: Amazon, Uber, COMPAS</p>
+            </div>
+        </div>
+
+        <!-- Dupla 2: Impacto Ambiental -->
+        <div class="team-member-card">
+            <div class="member-names">
+                <h3 class="member-name">Nome 3</h3>
+                <h3 class="member-name">Nome 4</h3>
+            </div>
+            <div class="member-topic topic-ambiental">
+                <span class="topic-icon">🌍</span>
+                <h4>Impacto Ambiental</h4>
+                <p>Energia, CO₂, data centers e sustentabilidade</p>
+            </div>
+        </div>
+
+        <!-- Dupla 3: Futuro do Trabalho -->
+        <div class="team-member-card">
+            <div class="member-names">
+                <h3 class="member-name">Nome 5</h3>
+                <h3 class="member-name">Nome 6</h3>
+            </div>
+            <div class="member-topic topic-trabalho">
+                <span class="topic-icon">💼</span>
+                <h4>Futuro do Trabalho</h4>
+                <p>Automação, desemprego e novas profissões</p>
+            </div>
+        </div>
+
+        <!-- Dupla 4: Deepfakes & Regulação -->
+        <div class="team-member-card">
+            <div class="member-names">
+                <h3 class="member-name">Nome 7</h3>
+                <h3 class="member-name">Nome 8</h3>
+            </div>
+            <div class="member-topic topic-regulacao">
+                <span class="topic-icon">👁️</span>
+                <h4>Deepfakes & Regulação</h4>
+                <p>Ética, vigilância e legislação da IA</p>
+            </div>
+        </div>
+
+    </div>
+
+    <style>
+        .team-member-card {
+            background: rgba(12, 12, 22, var(--bg-opacity-medium));
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(135, 163, 247, var(--border-opacity-medium));
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .team-member-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 20px 50px rgba(135, 163, 247, 0.3);
+        }
+
+        .member-names {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid rgba(135, 163, 247, var(--border-opacity));
+        }
+
+        .member-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-white);
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .team-member-card:hover .member-name {
+            transform: scale(1.05);
+        }
+
+        .member-topic {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .topic-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-topic h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+            color: var(--text-white);
+        }
+
+        .member-topic p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Cores específicas por tópico */
+        .topic-casos h4 {
+            color: var(--accent-primary);
+        }
+
+        .topic-ambiental h4 {
+            color: var(--color-correct);
+        }
+
+        .topic-trabalho h4 {
+            color: var(--lavender-mist);
+        }
+
+        .topic-regulacao h4 {
+            color: var(--color-wrong);
+        }
+
+        @media (max-width: 1200px) {
+            section [style*="grid-template-columns: repeat(4, 1fr)"] {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            section [style*="grid-template-columns: repeat(4, 1fr)"] {
+                grid-template-columns: 1fr !important;
+            }
+
+            .member-name {
+                font-size: 1.3rem;
+            }
+
+            .topic-icon {
+                font-size: 2rem;
+            }
+
+            .member-topic h4 {
+                font-size: 1rem;
+            }
+
+            .member-topic p {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</section>
+
+
+        <div class="info-box" style="margin-top: 5rem;">
+            <h3>💬 Nossa Mensagem</h3>
+            <p>
+                <strong>A IA não é inevitável da forma que existe hoje.</strong> Ela é criada e controlada por pessoas, 
+                moldada por escolhas políticas, econômicas e culturais. Estamos numa janela crítica onde ainda podemos 
+                influenciar sua trajetória. Este projeto é nossa contribuição para esse debate urgente e necessário.
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Projeto</h4>
+                <ul>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="fontes.html">Referências</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Escola</h4>
+                <ul>
+                    <li>ETP Amaury Cesar Vieira - FAETEC</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Orientador e Co-orientador</h4>
+                <ul>
+                    <li>Rosenclever</li>
+                    <li>Henrique Barbosa</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 SNCT | IA, Ética e Futuro do Trabalho</p>
+        </div>
+    </footer>
+
+    <script src="./src/fotter.js"></script>
+</body>
+</html>
