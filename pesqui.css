@@ -927,6 +927,12 @@ footer {
     border-bottom: 1px solid rgba(135, 163, 247, var(--border-opacity));
 }
 
+.carousel-section,
+.carousel-container,
+.carousel-slide {
+    overflow-x: hidden !important;
+}
+
 .carousel-container {
     position: relative;
     background: transparent;

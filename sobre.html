@@ -120,7 +120,7 @@
                     <div class="stat-label" style="color: var(--text-gray);">Ferramentas Interativas</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number" style="font-size: 3rem; color: var(--accent-primary); margin-bottom: 0.5rem;">40+</div>
+                    <div class="stat-number" style="font-size: 3rem; color: var(--accent-primary); margin-bottom: 0.5rem;">20+</div>
                     <div class="stat-label" style="color: var(--text-gray);">Horas de Pesquisa</div>
                 </div>
             </div>
@@ -138,8 +138,8 @@
         <!-- Dupla 1: Casos Reais -->
         <div class="team-member-card">
             <div class="member-names">
-                <h3 class="member-name">Nome 1</h3>
-                <h3 class="member-name">Nome 2</h3>
+                <h3 class="member-name">Marcos</h3>
+                <h3 class="member-name">Emilly</h3>
             </div>
             <div class="member-topic topic-casos">
                 <span class="topic-icon">🚨</span>
@@ -151,8 +151,8 @@
         <!-- Dupla 2: Impacto Ambiental -->
         <div class="team-member-card">
             <div class="member-names">
-                <h3 class="member-name">Nome 3</h3>
-                <h3 class="member-name">Nome 4</h3>
+                <h3 class="member-name">Gustavo</h3>
+                <h3 class="member-name">Hícaro</h3>
             </div>
             <div class="member-topic topic-ambiental">
                 <span class="topic-icon">🌍</span>
@@ -164,8 +164,8 @@
         <!-- Dupla 3: Futuro do Trabalho -->
         <div class="team-member-card">
             <div class="member-names">
-                <h3 class="member-name">Nome 5</h3>
-                <h3 class="member-name">Nome 6</h3>
+                <h3 class="member-name">Rafael</h3>
+                <h3 class="member-name">Kayki</h3>
             </div>
             <div class="member-topic topic-trabalho">
                 <span class="topic-icon">💼</span>
@@ -177,8 +177,8 @@
         <!-- Dupla 4: Deepfakes & Regulação -->
         <div class="team-member-card">
             <div class="member-names">
-                <h3 class="member-name">Nome 7</h3>
-                <h3 class="member-name">Nome 8</h3>
+                <h3 class="member-name">Cauã</h3>
+                <h3 class="member-name">Thiago</h3>
             </div>
             <div class="member-topic topic-regulacao">
                 <span class="topic-icon">👁️</span>
@@ -187,9 +187,32 @@
             </div>
         </div>
 
+                <div class="team-member-card">
+            <div class="member-names">
+                <h3 class="member-name">Emilly</h3>
+                <h3 class="member-name">Marcos</h3>
+            </div>
+            <div class="member-topic topic-casos">
+                <span class="topic-icon">🌐</span>
+                <h4>Construção do Site</h4>
+                <p>Páginas, Conteúdo, imagens..</p>
+            </div>
+        </div>
+
     </div>
 
-    <style>
+ <style>
+        section [style*="grid-template-columns: repeat(4, 1fr)"] {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        section [style*="grid-template-columns: repeat(4, 1fr)"] .team-member-card:last-child {
+            grid-column: 2 / 4;
+        }
+
         .team-member-card {
             background: rgba(12, 12, 22, var(--bg-opacity-medium));
             backdrop-filter: blur(20px);
@@ -202,7 +225,6 @@
             flex-direction: column;
             gap: 1.5rem;
         }
-
         .team-member-card:hover {
             transform: translateY(-8px);
             border-color: var(--accent-primary);
