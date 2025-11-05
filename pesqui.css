@@ -45,6 +45,30 @@
     --border-opacity-medium: 0.3;
 }
 
+html {
+    overflow-x: hidden; /* ← Esconde scroll horizontal do HTML */
+    max-width: 100%;
+}
+
+body {
+    padding-top: 100px;
+    overflow-x: hidden; /* ← JÁ TEM, mas confirme */
+    width: 100%; /* ← JÁ TEM, mas confirme */
+    max-width: 100vw; /* ← ADICIONE esta linha */
+}
+
+/* Garante que NADA ultrapasse a largura */
+*, *::before, *::after {
+    max-width: 100%;
+}
+
+/* Exceção para elementos que PRECISAM ser largos */
+.carousel-section,
+.carousel-container,
+.carousel-slide {
+    max-width: none !important;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -887,15 +911,16 @@ footer {
     }
 }
 .carousel-section {
-    position: relative !important; /* ✅ Mantém relative */
-    top: 0 !important; /* ⬅️ MUDE de 20px para 0 */
-    left: 0 !important;
+    position: relative !important;
+    top: 0 !important;
+    left: 50% !important;
     right: 0 !important;
     width: 100vw !important;
-    max-width: none !important;
+    max-width: 100vw !important;
     padding: 0 !important;
     margin: 0 !important;
-    margin-top: 80px !important; /* ⬅️ ADICIONE ISSO (altura do header) */
+    margin-left: -50vw !important;
+    margin-top: 80px !important;
     z-index: 999;
     background: rgba(12, 12, 22, 0.95);
     backdrop-filter: blur(20px);
